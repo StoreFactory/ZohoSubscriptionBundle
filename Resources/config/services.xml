@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="zoho.subscription_manager" class="ZohoSubscriptionBundle\Manager\ZohoSubscriptionManager">
+            <argument type="service" id="zoho_subscription.plan"></argument>
+            <argument type="service" id="zoho_subscription.addon"></argument>
+            <argument type="service" id="snc_redis.default"></argument>
+            <argument>%zoho_cache_enabled%</argument>
+            <argument>%zoho_cache_ttl%</argument>
+            <argument>%zoho_token%</argument>
+            <argument>%zoho_organization_id%</argument>
+        </service>
+    </services>
+</container>

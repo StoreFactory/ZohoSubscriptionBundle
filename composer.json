@@ -1,5 +1,14 @@
 {
+    "name": "storefactory/zoho-subscription-bundle",
+    "type": "bundle",
+    "autoload": {
+        "psr-4": {
+            "ZohoSubscriptionBundle": "/"
+        }
+    },
+    "description": "Zoho Subscription Bundle uses the zoho-subscription-api PHP client library",
     "require": {
         "storefactory/zoho-subscription-api": "^1.0"
-    }
+    },
+    "minimum-stability": "stable"
 }
