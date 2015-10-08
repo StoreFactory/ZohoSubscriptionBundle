@@ -1,9 +1,9 @@
 {
     "name": "storefactory/zoho-subscription-bundle",
-    "type": "bundle",
+    "type": "symfony-bundle",
     "autoload": {
         "psr-4": {
-            "ZohoSubscriptionBundle": "/"
+            "StoreFactory\\ZohoSubscriptionBundle\\": ""
         }
     },
     "description": "Zoho Subscription Bundle uses the zoho-subscription-api PHP client library",

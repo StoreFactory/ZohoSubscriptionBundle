@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Manager;
+namespace StoreFactory\ZohoSubscriptionBundle\Manager;
 
 class DefaultManager
 {
