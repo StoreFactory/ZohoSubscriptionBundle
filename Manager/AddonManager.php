@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Manager;
+namespace ZohoSubscriptionBundle\Manager;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
@@ -16,9 +16,9 @@ class AddonManager extends DefaultManager
      */
     public function listAllAddons($type = null)
     {
-        // Si le cache est présent et actif
+        // Si le cache est prÃ©sent et actif
         if ($this->redis && true === $this->cache) {
-            // Si les résultats sont déjà dans le cache
+            // Si les rï¿½sultats sont dï¿½jï¿½ dans le cache
             if ($this->redis->exists('addons')) {
                 return unserialize($this->redis->get('addons'));
             } else {

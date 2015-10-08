@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Manager;
+namespace StoreFactory\ZohoSubscriptionBundle\Manager;
 
 use AppBundle\ZohoSubscription\Addon\AddonApi;
 use AppBundle\ZohoSubscription\Plan\PlanApi;
@@ -16,9 +16,9 @@ class PlanManager extends DefaultManager
      */
     public function listAllPlans()
     {
-        // Si le cache est présent et actif
+        // Si le cache est prï¿½sent et actif
         if ($this->redis && true === $this->cache) {
-            // Si les résultats sont déjà dans le cache
+            // Si les rï¿½sultats sont dï¿½jï¿½ dans le cache
             if ($this->redis->exists('plans')) {
                 return unserialize($this->redis->get('plans'));
             } else {

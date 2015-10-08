@@ -3,7 +3,7 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service id="zoho.subscription_manager" class="ZohoSubscriptionBundle\Manager\ZohoSubscriptionManager">
+        <service id="zoho.subscription_manager" class="StoreFactory\ZohoSubscriptionBundle\Manager\ZohoSubscriptionManager">
             <argument type="service" id="zoho_subscription.plan"></argument>
             <argument type="service" id="zoho_subscription.addon"></argument>
             <argument type="service" id="snc_redis.default"></argument>

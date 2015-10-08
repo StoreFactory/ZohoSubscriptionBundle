@@ -1,6 +1,6 @@
 <?php
 
-namespace ZohoSubscriptionBundle\Manager;
+namespace StoreFactory\ZohoSubscriptionBundle\Manager;
 
 use AddonApi;
 use PlanApi;
