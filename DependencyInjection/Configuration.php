@@ -20,6 +20,38 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('zoho_subscription');
 
+        $rootNode
+            ->children()
+                ->arrayNode('api')
+                    ->children()
+                        ->scalarNode('key')
+                            ->isRequired()
+                            ->info('The service is not free. You must provide an API Key which can be found on : https://www.zoho.com/subscriptions/')
+                        ->end()
+                        ->scalarNode('organisation_id')
+                            ->isRequired()
+                            ->info('Organization ID from Zoho Subscription')
+                        ->end()
+                    ->end()
+                ->childrenNode('cache')
+                    ->children()
+                        ->booleanNode('enabled')
+                            ->info('If cache is active or not')
+                            ->defaultValue(false)
+                        ->end()
+                        ->scalarNode('service')
+                            ->info('Defines the service id of the cache that will be used')
+                            ->defaultValue(null)
+                        ->end()
+                        ->integerNode('ttl')
+                            ->info('Defines the TTL of the cache')
+                            ->defaultValue(null)
+                        ->end()
+                    ->end()
+                ->end()
+            ->end()
+        ;
+
         return $treeBuilder;
     }
 }
