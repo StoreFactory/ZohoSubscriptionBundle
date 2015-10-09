@@ -1,6 +1,6 @@
 <?php
 
-namespace StoreFactory\ZohoSubscriptionBundle\Manager;
+namespace StoreFactory\ZohoSubscriptionBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\Loader;
@@ -12,7 +12,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class MyPoseoExtension extends Extension
+class ZohoSubscriptionExtension extends Extension
 {
     /**
      * {@inheritDoc}

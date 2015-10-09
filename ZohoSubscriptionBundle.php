@@ -7,6 +7,8 @@
  * @author Tristan Bessoussa <tristan.bessoussa@gmail.com>
  */
 
+namespace StoreFactory\ZohoSubscriptionBundle;
+
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
