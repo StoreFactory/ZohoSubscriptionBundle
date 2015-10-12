@@ -28,7 +28,7 @@ class Configuration implements ConfigurationInterface
                             ->isRequired()
                             ->info('The service is not free. You must provide an API Key which can be found on : https://www.zoho.com/subscriptions/')
                         ->end()
-                        ->scalarNode('organisation_id')
+                        ->scalarNode('organization_id')
                             ->isRequired()
                             ->info('Organization ID from Zoho Subscription')
                         ->end()
