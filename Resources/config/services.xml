@@ -7,7 +7,7 @@
         <service id="zoho.api.manager" class="Zoho\Subscription\Client\Client" abstract="true">
             <argument>%zoho_subscription.api_key%</argument>
             <argument>%zoho_subscription.org_id%</argument>
-            <argument>%zoho_cache_enabled%</argument>
+            <argument>%zoho_subscription.cache.enabled%</argument>
             <argument />
             <argument>%zoho_subscription.cache.ttl%</argument>
         </service>
