@@ -34,3 +34,4 @@
 /composer.phar
 
 .idea
+composer.lock
