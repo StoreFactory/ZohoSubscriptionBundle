@@ -28,7 +28,6 @@ class ZohoSubscriptionExtension extends Extension
         $container->setParameter('zoho_subscription.api_key', $config['api']['key']);
         $container->setParameter('zoho_subscription.org_id', $config['api']['organization_id']);
         $container->setParameter('zoho_subscription.cache.service', $config['cache']['service']);
-        $container->setParameter('zoho_subscription.cache.enabled', $config['cache']['enabled']);
         $container->setParameter('zoho_subscription.cache.ttl', $config['cache']['ttl']);
     }
 }
