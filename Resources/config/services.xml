@@ -8,7 +8,6 @@
             <argument>%zoho_subscription.api_key%</argument>
             <argument>%zoho_subscription.org_id%</argument>
             <argument>%zoho_subscription.cache.enabled%</argument>
-            <argument />
             <argument>%zoho_subscription.cache.ttl%</argument>
         </service>
 
