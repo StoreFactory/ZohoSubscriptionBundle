@@ -1,6 +1,7 @@
 {
     "name": "storefactory/zoho-subscription-bundle",
     "type": "symfony-bundle",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "StoreFactory\\ZohoSubscriptionBundle\\": ""
@@ -16,7 +17,7 @@
     "require": {
         "php": ">=5.4.0",
         "symfony/framework-bundle": "^2.2",
-        "storefactory/zoho-subscription-api": "dev-master"
+        "storefactory/zoho-subscription-api": ">=1.0.0"
     },
     "minimum-stability": "stable"
 }
