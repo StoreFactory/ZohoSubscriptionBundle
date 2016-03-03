@@ -1,6 +1,6 @@
 <?php
 
-namespace StoreFactory\ZohoSubscriptionBundle\Manager;
+namespace StoreFactory\ZohoSubscriptionBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -28,20 +28,17 @@ class Configuration implements ConfigurationInterface
                             ->isRequired()
                             ->info('The service is not free. You must provide an API Key which can be found on : https://www.zoho.com/subscriptions/')
                         ->end()
-                        ->scalarNode('organisation_id')
+                        ->scalarNode('organization_id')
                             ->isRequired()
                             ->info('Organization ID from Zoho Subscription')
                         ->end()
                     ->end()
-                ->childrenNode('cache')
+                ->end()
+                ->arrayNode('cache')
                     ->children()
-                        ->booleanNode('enabled')
-                            ->info('If cache is active or not')
-                            ->defaultValue(false)
-                        ->end()
                         ->scalarNode('service')
                             ->info('Defines the service id of the cache that will be used')
-                            ->defaultValue(null)
+                            ->defaultValue('zoho.array.cache')
                         ->end()
                         ->integerNode('ttl')
                             ->info('Defines the TTL of the cache')

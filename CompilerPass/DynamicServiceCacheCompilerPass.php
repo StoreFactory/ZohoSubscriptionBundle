@@ -19,10 +19,10 @@ class DynamicServiceCacheCompilerPass implements CompilerPassInterface
      */
     public function process(ContainerBuilder $container)
     {
-        if ($container->getParameter('my_poseo.api.cache_service_id') !== null) {
+        if ($container->getParameter('zoho_subscription.cache.service') !== null) {
             $container
                 ->getDefinition('zoho.api.manager')
-                ->addArgument(new Reference($container->getParameter('zoho_subscription.cache.service')))
+                ->replaceArgument(2, new Reference($container->getParameter('zoho_subscription.cache.service')))
             ;
         }
     }

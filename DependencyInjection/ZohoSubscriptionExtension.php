@@ -1,6 +1,6 @@
 <?php
 
-namespace StoreFactory\ZohoSubscriptionBundle\Manager;
+namespace StoreFactory\ZohoSubscriptionBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\Loader;
@@ -12,7 +12,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class MyPoseoExtension extends Extension
+class ZohoSubscriptionExtension extends Extension
 {
     /**
      * {@inheritDoc}
@@ -26,9 +26,8 @@ class MyPoseoExtension extends Extension
         $loader->load('services.xml');
 
         $container->setParameter('zoho_subscription.api_key', $config['api']['key']);
-        $container->setParameter('zoho_subscription.org_id', $config['api']['organisation_id']);
+        $container->setParameter('zoho_subscription.org_id', $config['api']['organization_id']);
         $container->setParameter('zoho_subscription.cache.service', $config['cache']['service']);
-        $container->setParameter('zoho_subscription.cache.enabled', $config['cache']['enabled']);
         $container->setParameter('zoho_subscription.cache.ttl', $config['cache']['ttl']);
     }
 }
