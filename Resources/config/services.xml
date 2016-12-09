@@ -16,6 +16,7 @@
         <service id="zoho.api.invoice" class="Zoho\Subscription\Api\Invoice" parent="zoho.api.manager"></service>
         <service id="zoho.api.customer" class="Zoho\Subscription\Api\Customer" parent="zoho.api.manager"></service>
         <service id="zoho.api.subscription" class="Zoho\Subscription\Api\Subscription" parent="zoho.api.manager"></service>
+        <service id="zoho.api.hosted_page" class="Zoho\Subscription\Api\HostedPage" parent="zoho.api.manager"></service>
 
         <service id="zoho.array.cache" class="Doctrine\Common\Cache\ArrayCache"></service>
 
