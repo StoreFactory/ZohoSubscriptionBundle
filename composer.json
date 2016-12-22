@@ -15,9 +15,9 @@
     ],
     "description": "Zoho Subscription Bundle uses the zoho-subscription-api PHP client library",
     "require": {
-        "php": ">=5.4.0",
-        "symfony/framework-bundle": "^2.2",
-        "storefactory/zoho-subscription-api": ">=1.0.0"
+        "php": "^7.0",
+        "symfony/framework-bundle": "^2.8 | ^3.0",
+        "storefactory/zoho-subscription-api": "^2.0"
     },
     "minimum-stability": "stable"
 }
