@@ -6,7 +6,7 @@ A bundle using an implementation of Zoho API subscription [storefactory/zoho-sub
 # Installing the API
 The recommended way to install it is through [Composer](http://getcomposer.org/download/).
 
-`composer require zoho-subscription-bundle ">=1.0.0"`
+`composer require zoho-subscription-bundle "^3.0"`
 
 # Enabling the bundle 
 Open your `AppKernel.php` and add: 
