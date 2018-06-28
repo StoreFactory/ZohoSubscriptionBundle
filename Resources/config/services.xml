@@ -4,19 +4,19 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
 
-        <service id="zoho.api.manager" class="Zoho\Subscription\Client\Client" abstract="true">
+        <service id="Zoho\Subscription\Client\Client" abstract="true">
             <argument>%zoho_subscription.api_key%</argument>
             <argument>%zoho_subscription.org_id%</argument>
             <argument>null</argument>
             <argument>%zoho_subscription.cache.ttl%</argument>
         </service>
 
-        <service id="zoho.api.addon" class="Zoho\Subscription\Api\Addon" parent="zoho.api.manager"></service>
-        <service id="zoho.api.plan" class="Zoho\Subscription\Api\Plan" parent="zoho.api.manager"></service>
-        <service id="zoho.api.invoice" class="Zoho\Subscription\Api\Invoice" parent="zoho.api.manager"></service>
-        <service id="zoho.api.customer" class="Zoho\Subscription\Api\Customer" parent="zoho.api.manager"></service>
-        <service id="zoho.api.subscription" class="Zoho\Subscription\Api\Subscription" parent="zoho.api.manager"></service>
-        <service id="zoho.api.hosted_page" class="Zoho\Subscription\Api\HostedPage" parent="zoho.api.manager"></service>
+        <service id="Zoho\Subscription\Api\Addon" parent="Zoho\Subscription\Client\Client"></service>
+        <service id="Zoho\Subscription\Api\Plan" parent="Zoho\Subscription\Client\Client"></service>
+        <service id="Zoho\Subscription\Api\Invoice" parent="Zoho\Subscription\Client\Client"></service>
+        <service id="Zoho\Subscription\Api\Customer" parent="Zoho\Subscription\Client\Client"></service>
+        <service id="Zoho\Subscription\Api\Subscription" parent="Zoho\Subscription\Client\Client"></service>
+        <service id="Zoho\Subscription\Api\HostedPage" parent="Zoho\Subscription\Client\Client"></service>
 
         <service id="zoho.array.cache" class="Doctrine\Common\Cache\ArrayCache"></service>
 
